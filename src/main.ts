@@ -1,7 +1,7 @@
 import { enableProdMode, importProvidersFrom, isDevMode } from '@angular/core';
 import {
-  provideHttpClient,
-  withInterceptorsFromDi,
+    provideHttpClient,
+    withInterceptorsFromDi,
 } from '@angular/common/http';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -25,38 +25,41 @@ import { FaqService } from './app/pages/incomings-page/faq.service';
 import { StatutesService } from './app/pages/statutes-page/statutes.service';
 import { SharedModule } from './app/shared/shared.module';
 import { environment } from './environments/environment';
+import { SecurityContext } from '@angular/core';
 
 if (environment.production) {
-  enableProdMode();
+    enableProdMode();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  bootstrapApplication(AppComponent, {
-    providers: [
-      importProvidersFrom(
-        AppRoutingModule,
-        FullCalendarModule,
-        GalleryModule,
-        MarkdownModule.forRoot(),
-        SharedModule,
-      ),
-      CocService,
-      ContentService,
-      CookieService,
-      FaqService,
-      FullCalendarModule,
-      ImprintESNGermanyService,
-      ImprintService,
-      MainService,
-      MessageService,
-      PartnerService,
-      StatutesService,
-      provideAnimations(),
-      provideHttpClient(withInterceptorsFromDi()),
-      provideServiceWorker('ngsw-worker.js', {
-        enabled: !isDevMode(),
-        registrationStrategy: 'registerWhenStable:30000',
-      }),
-    ],
-  }).catch((err) => console.error(err));
+    bootstrapApplication(AppComponent, {
+        providers: [
+            importProvidersFrom(
+                AppRoutingModule,
+                FullCalendarModule,
+                GalleryModule,
+                MarkdownModule.forRoot({
+                    sanitize: SecurityContext.NONE
+                }),
+                SharedModule,
+            ),
+            CocService,
+            ContentService,
+            CookieService,
+            FaqService,
+            FullCalendarModule,
+            ImprintESNGermanyService,
+            ImprintService,
+            MainService,
+            MessageService,
+            PartnerService,
+            StatutesService,
+            provideAnimations(),
+            provideHttpClient(withInterceptorsFromDi()),
+            provideServiceWorker('ngsw-worker.js', {
+                enabled: !isDevMode(),
+                registrationStrategy: 'registerWhenStable:30000',
+            }),
+        ],
+    }).catch((err) => console.error(err));
 });

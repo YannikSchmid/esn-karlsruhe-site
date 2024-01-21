@@ -1,179 +1,88 @@
 <footer *ngIf="mainInfo" id="foot" class="bg-footer relative">
-  <div id="foot2" class="divider-top">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <title>dark grey rectangular shape for footer</title>
-      <path
-        id="foot3"
-        d="M1200 0L0 0 892.25 114.72 1200 0z"
-        class="shape-fill"
-      ></path>
-    </svg>
-  </div>
-  <div
-    class="font-body text-white flex flex-wrap max-w-screen-xl m-auto sm:px-16 pt-8"
-  >
-    <div class="sm:w-full lg:w-1/2 xl:w-1/5 px-8">
-      <p class="font-bold uppercase py-1 text-lg">Contact</p>
-      <p class="font-bold">
-        {{ mainInfo.address_name_first_line }}
-      </p>
-      <p>
-        {{ mainInfo.address_street_second_line }}
-      </p>
-      <p>
-        {{ mainInfo.address_city_third_line }}
-      </p>
-      <p class="pt-1 pb-4">
-        <a
-          href="mailto:{{ mainInfo.address_email_fourth_line }}"
-          rel="noopener"
-          class="hover:underline"
-          >{{ mainInfo.address_email_fourth_line }}</a
-        >
-      </p>
+    <div id="foot2" class="divider-top">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <title>dark grey rectangular shape for footer</title>
+            <path id="foot3" d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+        </svg>
     </div>
-    <div class="sm:w-full lg:w-1/2 xl:w-1/5 px-8">
-      <p class="font-bold uppercase py-1 text-lg">Links</p>
-      <a
-        routerLink="/legal-notice"
-        routerLinkActive="active"
-        class="hover:underline"
-        >Legal Notice</a
-      ><br />
-      <a routerLink="/coc" routerLinkActive="active" class="hover:underline"
-        >Code of Conduct</a
-      ><br />
-      <ng-container *ngIf="statutesExist">
-        <a
-          routerLink="/statutes"
-          routerLinkActive="active"
-          class="hover:underline"
-          >Statutes</a
-        ><br />
-      </ng-container>
-      <a
-        routerLink="/for-incomings"
-        routerLinkActive="active"
-        class="hover:underline"
-        >FAQ</a
-      >
+    <div class="font-body text-white flex flex-wrap max-w-screen-xl m-auto sm:px-16 pt-8">
+        <div class="sm:w-full lg:w-1/2 xl:w-1/5 px-8">
+            <p class="font-bold uppercase py-1 text-lg">Contact</p>
+            <p class="font-bold">
+                {{ mainInfo.address_name_first_line }}
+            </p>
+            <p>
+                {{ mainInfo.address_street_second_line }}
+            </p>
+            <p>
+                {{ mainInfo.address_city_third_line }}
+            </p>
+            <p class="pt-1 pb-4">
+                <a href="mailto:{{ mainInfo.address_email_fourth_line }}" rel="noopener" class="hover:underline">{{
+                    mainInfo.address_email_fourth_line }}</a>
+            </p>
+        </div>
+        <div class="sm:w-full lg:w-1/2 xl:w-1/5 px-8">
+            <p class="font-bold uppercase py-1 text-lg">Links</p>
+            <a routerLink="/legal-notice" routerLinkActive="active" class="hover:underline">Legal Notice</a><br />
+            <a routerLink="/coc" routerLinkActive="active" class="hover:underline">Code of Conduct</a><br />
+            <ng-container *ngIf="statutesExist">
+                <a routerLink="/statutes" routerLinkActive="active" class="hover:underline">Statutes</a><br />
+            </ng-container>
+            <a routerLink="/for-incomings" routerLinkActive="active" class="hover:underline">FAQ</a>
+        </div>
+        <div class="sm:w-full lg:w-1/2 xl:w-1/5 px-8">
+            <p class="font-bold uppercase py-1 text-lg">External Links</p>
+            <a href="https://esncard.org/" target="_blank" rel="noopener" class="hover:underline">ESNcard.org</a><br />
+            <a href="https://erasmusintern.org/" target="_blank" rel="noopener"
+                class="hover:underline">ErasmusIntern.org</a><br />
+            <a href="https://esn.org/" target="_blank" rel="noopener" class="hover:underline">ESN
+                International</a><br />
+            <a href="https://learning-agreement.eu/" target="_blank" rel="noopener"
+                class="hover:underline">Learning-Agreement.eu</a>
+        </div>
+        <div class="sm:w-full lg:w-1/2 xl:w-1/5 pl-8 pr-2">
+            <p class="font-bold uppercase py-1 text-lg">Social Media</p>
+            <p *ngIf="mainInfo.facebook_name" class="pb-4">
+                <a href="{{ mainInfo.facebook_link }}" target="_blank" rel="noopener" class="hover:underline">
+                    <img alt="WhatsApp" src="../../../assets/social/whatsapp.svg" class="h-6 float-left pr-2" />{{
+                    mainInfo.facebook_name }}
+                </a>
+            </p>
+            <p *ngIf="mainInfo.instagram_link && mainInfo.instagram_name" class="pb-4">
+                <a href="{{ mainInfo.instagram_link }}" target="_blank" rel="noopener" class="hover:underline"><img
+                        alt="Instagram" src="../../../assets/social/instagram.png" class="h-6 float-left pr-2" />
+                    {{ mainInfo.instagram_name }}
+                </a>
+            </p>
+        </div>
+        <div class="sm:w-full lg:w-1/2 xl:w-1/5 px-8">
+            <p class="font-bold uppercase py-1 text-lg">Supported By</p>
+            <div>
+                <a href="https://eu.daad.de/service/ansprechpartner/lei/de/46405-lokale-erasmus-initiativen/"
+                    rel="noopener" target="_blank" class="hover:underline">
+                    <img src="../../../assets/logo/lei-white.png" alt="Lokale Erasmus+ Initiative Logo" class="pb-2" />
+                    <p>Lokale Erasmus+ Initiativen</p>
+                </a>
+            </div>
+        </div>
+        <div class="w-full text-center my-4">
+            <div class="w-10 inline-block mx-auto">
+                <a routerLink="/" routerLinkActive="active"><img src="../../../assets/logo/bollenhut-white.png"
+                        alt="ESN Freiburg Logo" width="48px" /></a>
+            </div>
+            <p>
+                <img src="../assets/logo/ESN-star-RGB.png" alt="ESN star" class="w-6 inline-block mx-auto" />
+                created by the
+                <span (mouseenter)="pink()">IT-Girl</span> of ESN Freiburg e.V.
+            </p>
+            <p class="mx-auto text-graylight" id="strapiLink">
+                <a href="https://directus.esn-germany.de/admin/" class="hover:underline" target="_blank"
+                    rel="noopener">Enter Directus here (for admins)
+                    <img src="assets/social/open-icon.png" width="20px" alt="icon expand in new tab"
+                        class="inline align-text-bottom" /></a><br />
+                Last built at {{ timestamp }}
+            </p>
+        </div>
     </div>
-    <div class="sm:w-full lg:w-1/2 xl:w-1/5 px-8">
-      <p class="font-bold uppercase py-1 text-lg">External Links</p>
-      <a
-        href="https://esncard.org/"
-        target="_blank"
-        rel="noopener"
-        class="hover:underline"
-        >ESNcard.org</a
-      ><br />
-      <a
-        href="https://erasmusintern.org/"
-        target="_blank"
-        rel="noopener"
-        class="hover:underline"
-        >ErasmusIntern.org</a
-      ><br />
-      <a
-        href="https://esn.org/"
-        target="_blank"
-        rel="noopener"
-        class="hover:underline"
-        >ESN International</a
-      ><br />
-      <a
-        href="https://learning-agreement.eu/"
-        target="_blank"
-        rel="noopener"
-        class="hover:underline"
-        >Learning-Agreement.eu</a
-      >
-    </div>
-    <div class="sm:w-full lg:w-1/2 xl:w-1/5 pl-8 pr-2">
-      <p class="font-bold uppercase py-1 text-lg">Social Media</p>
-      <p *ngIf="mainInfo.facebook_name" class="pb-4">
-        <a
-          href="{{ mainInfo.facebook_link }}"
-          target="_blank"
-          rel="noopener"
-          class="hover:underline"
-        >
-          <img
-            alt="Facebook"
-            src="../../../assets/social/facebook.png"
-            class="h-6 float-left pr-2"
-          />{{ mainInfo.facebook_name }}
-        </a>
-      </p>
-      <p
-        *ngIf="mainInfo.instagram_link && mainInfo.instagram_name"
-        class="pb-4"
-      >
-        <a
-          href="{{ mainInfo.instagram_link }}"
-          target="_blank"
-          rel="noopener"
-          class="hover:underline"
-          ><img
-            alt="Instagram"
-            src="../../../assets/social/instagram.png"
-            class="h-6 float-left pr-2"
-          />
-          {{ mainInfo.instagram_name }}
-        </a>
-      </p>
-    </div>
-    <div class="sm:w-full lg:w-1/2 xl:w-1/5 px-8">
-      <p class="font-bold uppercase py-1 text-lg">Supported By</p>
-      <div>
-        <a
-          href="https://eu.daad.de/service/ansprechpartner/lei/de/46405-lokale-erasmus-initiativen/"
-          rel="noopener"
-          target="_blank"
-          class="hover:underline"
-        >
-          <img
-            src="../../../assets/logo/lei-white.png"
-            alt="Lokale Erasmus+ Initiative Logo"
-            class="pb-2"
-          />
-          <p>Lokale Erasmus+ Initiativen</p>
-        </a>
-      </div>
-    </div>
-    <div class="w-full text-center my-4">
-      <div class="w-10 inline-block mx-auto">
-        <a routerLink="/" routerLinkActive="active"
-          ><img
-            src="../../../assets/logo/bollenhut-white.png"
-            alt="ESN Freiburg Logo"
-            width="48px"
-        /></a>
-      </div>
-      <p>
-        <img
-          src="../assets/logo/ESN-star-RGB.png"
-          alt="ESN star"
-          class="w-6 inline-block mx-auto"
-        />
-        created by the
-        <span (mouseenter)="pink()">IT-Girl</span> of ESN Freiburg e.V.
-      </p>
-      <p class="mx-auto text-graylight" id="strapiLink">
-        <a
-          href="https://directus.esn-germany.de/admin/"
-          class="hover:underline"
-          target="_blank"
-          rel="noopener"
-          >Enter Directus here (for admins)
-          <img
-            src="assets/social/open-icon.png"
-            width="20px"
-            alt="icon expand in new tab"
-            class="inline align-text-bottom" /></a
-        ><br />
-        Last built at {{ timestamp }}
-      </p>
-    </div>
-  </div>
 </footer>

@@ -1,221 +1,126 @@
 <!-- White triangular shapes that form the top triangle -->
 <div class="divider-bottom">
-  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="shadow">
-    <title></title>
-    <path
-      d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
-      class="shape-fill"
-    ></path>
-  </svg>
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="shadow">
+        <title></title>
+        <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+    </svg>
 </div>
 <!-- Mobile Menu that opens on click. Burger only visible when on mobile -->
 <div class="w-full">
-  <ul
-    class="z-10 font-body text-white text-xl bg-gradient float-right w-3/5 hidden absolute right-0"
-    id="menu"
-    #menu
-    data-testid="esn-mobile-menu"
-  >
-    <a
-      routerLink="/"
-      (click)="toggleMenu()"
-      routerLinkActive="colorActiveLink"
-      [routerLinkActiveOptions]="{ exact: true }"
-      ><li class="mobile-li hover-zoom">Home</li></a
-    >
-    <a routerLink="/esncard" (click)="toggleMenu()"
-      ><li class="mobile-li hover-zoom" routerLinkActive="colorActiveLink">
-        ESNcard & Partners
-      </li></a
-    >
-    <a
-      routerLink="/events"
-      (click)="toggleMenu()"
-      routerLinkActive="colorActiveLink"
-      ><li class="mobile-li hover-zoom">Events</li></a
-    >
-    <a
-      routerLink="/for-incomings"
-      (click)="toggleMenu()"
-      routerLinkActive="colorActiveLink"
-      ><li class="mobile-li hover-zoom">For Incomings</li></a
-    >
-    <a
-      routerLink="/for-members"
-      (click)="toggleMenu()"
-      routerLinkActive="colorActiveLink"
-      ><li class="mobile-li hover-zoom">For Members</li></a
-    >
-    <a
-      routerLink="/team"
-      (click)="toggleMenu()"
-      routerLinkActive="colorActiveLink"
-      ><li class="mobile-li hover-zoom">Our Team</li></a
-    >
-    <a
-      routerLink="/legal-notice"
-      (click)="toggleMenu()"
-      routerLinkActive="colorActiveLink"
-      ><li class="p-4 pl-8 border-white hover-zoom">Legal Notice</li></a
-    >
-  </ul>
+    <ul class="z-10 font-body text-white text-xl bg-gradient float-right w-3/5 hidden absolute right-0" id="menu" #menu
+        data-testid="esn-mobile-menu">
+        <a routerLink="/" (click)="toggleMenu()" routerLinkActive="colorActiveLink"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <li class="mobile-li hover-zoom">Home</li>
+        </a>
+        <a routerLink="/esncard" (click)="toggleMenu()">
+            <li class="mobile-li hover-zoom" routerLinkActive="colorActiveLink">
+                ESNcard & Partners
+            </li>
+        </a>
+        <a routerLink="/events" (click)="toggleMenu()" routerLinkActive="colorActiveLink">
+            <li class="mobile-li hover-zoom">Events</li>
+        </a>
+        <a routerLink="/for-incomings" (click)="toggleMenu()" routerLinkActive="colorActiveLink">
+            <li class="mobile-li hover-zoom">For Incomings</li>
+        </a>
+        <a routerLink="/for-members" (click)="toggleMenu()" routerLinkActive="colorActiveLink">
+            <li class="mobile-li hover-zoom">For Locals</li>
+        </a>
+        <a routerLink="/team" (click)="toggleMenu()" routerLinkActive="colorActiveLink">
+            <li class="mobile-li hover-zoom">Our Team</li>
+        </a>
+        <a routerLink="/legal-notice" (click)="toggleMenu()" routerLinkActive="colorActiveLink">
+            <li class="p-4 pl-8 border-white hover-zoom">Legal Notice</li>
+        </a>
+    </ul>
 </div>
 <!-- Logo and white top navigation -->
-<div
-  id="navbar"
-  #navbar
-  class="w-full mb-16 bg clear-both"
-  [ngStyle]="bgImage$ | async"
->
-  <nav
-    class="flex flex-nowrap items-center max-w-screen-2lg justify-between m-auto sm:px-16 pt-8 font-body"
-  >
-    <div class="flex items-center flex-shrink-0 text-2xl pr-8">
-      <a routerLink="/" routerLinkActive=""
-        ><img
-          class="h-26 ml-8"
-          alt="ESN logo"
-          src="../../../assets/logo/DE-logo-colour.png"
-      /></a>
-    </div>
-    <div
-      class="px-8 w-full clear-both block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:visible"
-    >
-      <div class="text-2xl flex justify-between lg:flex-grow max-w-screen-xl">
-        <div class="relative addhover">
-          <a routerLink="/esncard" routerLinkActive="addhoverActive">
-            <button class="mobile-but">ESNcard & Partners</button></a
-          >
+<div id="navbar" #navbar class="w-full mb-16 bg clear-both" [ngStyle]="bgImage$ | async">
+    <nav class="flex flex-nowrap items-center max-w-screen-2lg justify-between m-auto sm:px-16 pt-8 font-body">
+        <div class="flex items-center flex-shrink-0 text-2xl pr-8">
+            <a routerLink="/" routerLinkActive=""><img class="h-26 ml-8" alt="ESN logo"
+                    src="../../../assets/section-logos/karlsruhe@esn-germany.de.png" /></a>
         </div>
-        <div class="relative addhover">
-          <a routerLink="/events" routerLinkActive="addhoverActive">
-            <button class="mobile-but">Events</button></a
-          >
+        <div class="px-8 w-full clear-both block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:visible">
+            <div class="text-2xl flex justify-between lg:flex-grow max-w-screen-xl">
+                <div class="relative addhover">
+                    <a routerLink="/esncard" routerLinkActive="addhoverActive">
+                        <button class="mobile-but">ESNcard & Partners</button></a>
+                </div>
+                <div class="relative addhover">
+                    <a routerLink="/events" routerLinkActive="addhoverActive">
+                        <button class="mobile-but">Events</button></a>
+                </div>
+                <div class="relative addhover">
+                    <a routerLink="/for-incomings" routerLinkActive="addhoverActive">
+                        <button class="mobile-but">For Incomings</button></a>
+                </div>
+                <div class="relative addhover">
+                    <a routerLink="/for-members" routerLinkActive="addhoverActive"><button class="mobile-but">For
+                            Locals</button></a>
+                </div>
+                <div class="relative addhover">
+                    <a routerLink="/team" routerLinkActive="addhoverActive">
+                        <button class="mobile-but">Our Team</button></a>
+                </div>
+            </div>
         </div>
-        <div class="relative addhover">
-          <a routerLink="/for-incomings" routerLinkActive="addhoverActive">
-            <button class="mobile-but">For Incomings</button></a
-          >
+        <div class="block pr-8 sm:pr-16 lg:hidden" id="burger" #burger>
+            <button data-testid="esn-burger-menu"
+                class="flex items-center px-3 py-2 border rounded text-white border-white" (click)="toggleMenu()">
+                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                    <title>menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
         </div>
-        <div class="relative addhover">
-          <a routerLink="/for-members" routerLinkActive="addhoverActive"
-            ><button class="mobile-but">For Members</button></a
-          >
-        </div>
-        <div class="relative addhover">
-          <a routerLink="/team" routerLinkActive="addhoverActive">
-            <button class="mobile-but">Our Team</button></a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="block pr-8 sm:pr-16 lg:hidden" id="burger" #burger>
-      <button
-        data-testid="esn-burger-menu"
-        class="flex items-center px-3 py-2 border rounded text-white border-white"
-        (click)="toggleMenu()"
-      >
-        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
-          <title>menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
-    </div>
-  </nav>
+    </nav>
 </div>
 <!-- Social Media buttons with hover-effect on the right side (bottom if mobile) -->
 <div class="max-w-screen-2xl m-auto" *ngIf="mainInfo">
-  <div class="fixed top-56 right-0 xl:mr-12 lg:mr-1 invisible lg:visible z-10">
-    <div *ngIf="mainInfo.instagram_link" class="ml-8">
-      <a href="{{ mainInfo.instagram_link }}" target="_blank" rel="noopener">
-        <div id="bubble1" #bubble1 class="bubble invisible font-body">
-          {{ mainInfo.instagram_name }}
+    <div class="fixed top-56 right-0 xl:mr-12 lg:mr-1 invisible lg:visible z-10">
+        <div *ngIf="mainInfo.instagram_link" class="ml-8">
+            <a href="{{ mainInfo.instagram_link }}" target="_blank" rel="noopener">
+                <div id="bubble1" #bubble1 class="bubble invisible font-body">
+                    {{ mainInfo.instagram_name }}
+                </div>
+                <button class="p-2 rounded-full block my-2 hov" (mouseenter)="toggleBubble(1)"
+                    (mouseleave)="toggleBubble(1)" [ngStyle]="buttonColor$ | async">
+                    <img class="m-2 h-6" src="../../../assets/social/instagram.png" alt="instagram" />
+                </button>
+            </a>
         </div>
-        <button
-          class="p-2 rounded-full block my-2 hov"
-          (mouseenter)="toggleBubble(1)"
-          (mouseleave)="toggleBubble(1)"
-          [ngStyle]="buttonColor$ | async"
-        >
-          <img
-            class="m-2 h-6"
-            src="../../../assets/social/instagram.png"
-            alt="instagram"
-          />
-        </button>
-      </a>
-    </div>
-    <div *ngIf="mainInfo.facebook_link">
-      <a href="{{ mainInfo.facebook_link }}" target="_blank" rel="noopener">
-        <div id="bubble2" #bubble2 class="bubble invisible font-body">
-          fb.com/{{ mainInfo.facebook_name }}
+        <div *ngIf="mainInfo.facebook_link">
+            <a href="{{ mainInfo.facebook_link }}" target="_blank" rel="noopener">
+                <div id="bubble2" #bubble2 class="bubble invisible font-body">
+                    {{ mainInfo.facebook_name }}
+                </div>
+                <button class="p-2 rounded-full block my-2 hov" [ngStyle]="buttonColor$ | async"
+                    (mouseenter)="toggleBubble(2)" (mouseleave)="toggleBubble(2)">
+                    <img class="m-2 h-6" src="../../../assets/social/whatsapp.svg" alt="WhatsApp" />
+                </button>
+            </a>
         </div>
-        <button
-          class="p-2 rounded-full block my-2 hov"
-          [ngStyle]="buttonColor$ | async"
-          (mouseenter)="toggleBubble(2)"
-          (mouseleave)="toggleBubble(2)"
-        >
-          <img
-            class="m-2 h-6"
-            src="../../../assets/social/facebook.png"
-            alt="facebook"
-          />
-        </button>
-      </a>
     </div>
-  </div>
-  <!-- bottom bobbles -->
-  <ng-container class="m-auto" *ngIf="mainInfo.instagram_link">
-    <div
-      *ngIf="mainInfo.facebook_link"
-      class="fixed bottom-0 right-0 visible lg:invisible z-10 mr-8 mb-8"
-      [ngClass]="{ 'show-scrollTop-bubble': windowScrolled }"
-    >
-      <a
-        href="{{ mainInfo.facebook_link }}"
-        target="_blank"
-        rel="noopener"
-        title="Facebook"
-        ><button
-          class="p-2 rounded-full hov ml-2"
-          [ngStyle]="buttonColor$ | async"
-        >
-          <img
-            class="m-2 h-6"
-            src="../../../assets/social/facebook.png"
-            alt="facebook"
-          /></button
-      ></a>
-      <a
-        href="{{ mainInfo.instagram_link }}"
-        target="_blank"
-        rel="noopener"
-        title="Instagram"
-        ><button class="p-2 rounded-full hov" [ngStyle]="buttonColor$ | async">
-          <img
-            class="m-2 h-6"
-            src="../../../assets/social/instagram.png"
-            alt="instagram"
-          /></button
-      ></a>
-    </div>
-    <div
-      class="scroll-to-top z-20"
-      [ngClass]="{ 'show-scrollTop': windowScrolled }"
-    >
-      <button (click)="scrollToTop()">
-        <div
-          class="bg-footer p-2 rounded-lg outline outline-1 outline-graylight hover:bg-graymap"
-        >
-          <img
-            src="../../../assets/fonts/MaterialIcons/expand_less.png"
-            class="m-2"
-            width="20px"
-            alt="scroll to top"
-          />
+    <!-- bottom bobbles -->
+    <ng-container class="m-auto" *ngIf="mainInfo.instagram_link">
+        <div *ngIf="mainInfo.facebook_link" class="fixed bottom-0 right-0 visible lg:invisible z-10 mr-8 mb-8"
+            [ngClass]="{ 'show-scrollTop-bubble': windowScrolled }">
+            <a href="{{ mainInfo.facebook_link }}" target="_blank" rel="noopener" title="WhatsApp"><button
+                    class="p-2 rounded-full hov ml-2" [ngStyle]="buttonColor$ | async">
+                    <img class="m-2 h-6" src="../../../assets/social/whatsapp.svg" alt="WhatsApp" /></button></a>
+            <a href="{{ mainInfo.instagram_link }}" target="_blank" rel="noopener" title="Instagram"><button
+                    class="p-2 rounded-full hov" [ngStyle]="buttonColor$ | async">
+                    <img class="m-2 h-6" src="../../../assets/social/instagram.png" alt="instagram" /></button></a>
         </div>
-      </button>
-    </div>
-  </ng-container>
+        <div class="scroll-to-top z-20" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+            <button (click)="scrollToTop()">
+                <div class="bg-footer p-2 rounded-lg outline outline-1 outline-graylight hover:bg-graymap">
+                    <img src="../../../assets/fonts/MaterialIcons/expand_less.png" class="m-2" width="20px"
+                        alt="scroll to top" />
+                </div>
+            </button>
+        </div>
+    </ng-container>
 </div>
