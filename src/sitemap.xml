@@ -21,10 +21,12 @@
     <url>
         <loc>https://esn-karlsruhe.de/legal-notice</loc>
     </url>
+  <!-- not in use currently
     <url>
         <loc>https://esn-karlsruhe.de/statutes</loc>
     </url>
+    -->
     <url>
-        <loc>https://esn-karlsruhe.de/coc</loc>
+        <loc>https://esn-karlsruhe.de/privacy-policy</loc>
     </url>
 </urlset>
