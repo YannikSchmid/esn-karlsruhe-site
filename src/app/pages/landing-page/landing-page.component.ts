@@ -49,12 +49,15 @@ export class LandingPageComponent implements OnInit {
     this.mainService.getMainInformation().subscribe({
       next: (mainInfo?: MainItem) => {
         this.mainInfo = mainInfo;
+        //added setImages() because in the if case a few rows down there is still not mainInfo available so no pictures will be shown
+        this.setImages();
       },
       error: (error) => {
         console.error(error);
       },
     });
 
+    //does not work if website is not already running. Because mainInfo is so far not available
     if (this.mainInfo) {
       this.setTitle();
       this.setImages();

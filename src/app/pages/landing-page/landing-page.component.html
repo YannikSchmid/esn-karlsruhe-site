@@ -9,6 +9,7 @@
     </div>
   </div>
 </div>
+
 <ng-container *ngIf="mainInfo?.use_image_slideshow; else imageGrid">
   <div class="bg-graylight my-1 py-1 xl:my-4 xl:py-4">
     <div class="w-4/5 xl:w-3/5 mx-auto">
@@ -24,6 +25,7 @@
     </div>
   </div>
 </ng-container>
+
 
 <ng-template #imageGrid>
   <div>
@@ -68,4 +70,5 @@
     <div class="esn-colors"></div>
   </div>
 </ng-template>
+
 <esn-content-item [page]="page"></esn-content-item>

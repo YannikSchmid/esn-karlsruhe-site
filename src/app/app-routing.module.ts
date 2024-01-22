@@ -51,7 +51,7 @@ const routes: Routes = [
     component: StatutesPageComponent,
   },
   {
-    path: 'coc',
+    path: 'privacy-policy',
     component: CocPageComponent,
   },
   {
