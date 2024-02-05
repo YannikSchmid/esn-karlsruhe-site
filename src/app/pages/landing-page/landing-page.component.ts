@@ -85,7 +85,6 @@ export class LandingPageComponent implements OnInit {
 
   private setGalleryThumb(): void {
     if (this.isBrowser) {
-      console.log(window.innerWidth);
       if (window.innerWidth < 1000) {
         this.showThumb = false;
       } else {
