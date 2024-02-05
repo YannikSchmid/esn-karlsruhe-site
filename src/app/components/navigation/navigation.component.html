@@ -31,7 +31,10 @@
             <li class="mobile-li hover-zoom">Our Team</li>
         </a>
         <a routerLink="/legal-notice" (click)="toggleMenu()" routerLinkActive="colorActiveLink">
-            <li class="p-4 pl-8 border-white hover-zoom">Legal Notice</li>
+            <li [ngClass]="installPrompt ? 'mobile-li' : ''" class="p-4 pl-8 border-white hover-zoom">Legal Notice</li>
+        </a>
+        <a (click)="installPWA()" *ngIf="installPrompt">
+            <li class="p-4 pl-8 border-white hover-zoom">Install App</li>
         </a>
     </ul>
 </div>

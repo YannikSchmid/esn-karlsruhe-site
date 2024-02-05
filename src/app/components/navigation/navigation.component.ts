@@ -32,11 +32,17 @@ export class NavigationComponent implements OnInit {
   public buttonColor$?: Observable<any>;
   public mainInfo?: MainItem;
   public windowScrolled = false;
+  public installPrompt: null | any = null;
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private mainService: MainService,
   ) {}
+
+  @HostListener('window:beforeinstallprompt', ['$event'])
+  onbeforeinstallprompt(e: any) {
+    this.installPrompt = e;
+  }
 
   @HostListener('document:click', ['$event'])
   documentClick(event: MouseEvent) {
@@ -143,5 +149,12 @@ export class NavigationComponent implements OnInit {
       default:
         return 'rgb(255, 255, 255';
     }
+  }
+
+  public installPWA() {
+    if (!this.installPrompt) {
+      return;
+    }
+    this.installPrompt.prompt();
   }
 }
