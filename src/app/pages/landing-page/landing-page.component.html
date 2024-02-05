@@ -11,8 +11,8 @@
 </div>
 
 <ng-container *ngIf="mainInfo?.use_image_slideshow; else imageGrid">
-  <div class="bg-graylight my-1 py-1 xl:my-4 xl:py-4">
-    <div class="w-4/5 xl:w-3/5 mx-auto">
+  <div class="bg-graylight my-1 sm:py-1 xl:my-4 xl:py-4">
+    <div class="w-full sm:w-4/5 xl:w-3/5 mx-auto">
       <gallery
         [items]="images"
         [counter]="false"
