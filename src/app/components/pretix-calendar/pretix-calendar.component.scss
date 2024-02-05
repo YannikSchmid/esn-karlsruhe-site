@@ -1,10 +1,12 @@
 .margin-cal {
-    margin: 0 0.75rem;
     z-index: 0;
+    max-width: 1280px;
+    padding: 0 6rem;
+    margin: auto;
 }
 
-@media only screen and (min-wdith: 992px) {
+@media only screen and (max-width: 800px) {
     .margin-cal {
-        margin: 2rem;
+        padding: 0 2rem;
     }
 }
