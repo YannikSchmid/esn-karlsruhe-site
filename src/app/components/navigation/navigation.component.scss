@@ -1,7 +1,6 @@
 .bg {
     background-position: center;
     background-size: cover;
-    padding-bottom: 101px;
 }
 
 .divider-bottom {
@@ -11,13 +10,14 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    @apply sm:top-[138px] top-26;
 }
 
 .divider-bottom svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 105px;
+    @apply sm:h-26 h-[52px];
 }
 
 .divider-bottom .shape-fill {
