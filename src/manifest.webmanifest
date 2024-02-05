@@ -1,9 +1,19 @@
 {
-    "name": "Erasmus Student Network Karlsruhe",
+    "name": "ESN Karlsruhe",
     "short_name": "ESN Karlsruhe",
     "theme_color": "#2e3192",
     "background_color": "#fff",
     "display": "standalone",
     "scope": "./",
-    "start_url": "./"
+    "start_url": "./",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "48x48"
+        },
+        {
+            "src": "assets/logo/esn-star.png",
+            "sizes": "456x456"
+        }
+    ]
 }
