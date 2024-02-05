@@ -23,6 +23,7 @@ export class ContentItemComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     private contentService: ContentService,
   ) {
+    /** 
     window.addEventListener('scroll', () => {
       const box0 = this.document.querySelector('.box0');
       if (box0 != null) {
@@ -43,6 +44,7 @@ export class ContentItemComponent implements OnInit {
         }
       }
     });
+    */
   }
 
   ngOnInit(): void {
