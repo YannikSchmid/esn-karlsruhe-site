@@ -1,5 +1,5 @@
 <div *ngIf="contentInfo as contentItemList; else loading" class="outer-imgbox">
-  <div *ngFor="let c of contentItemList; let idx = index" class="px-4 mb-20">
+  <div *ngFor="let c of contentItemList; let idx = index" class="px-4 sm:mb-15 my-5">
     <!-- text only -->
     <div
       *ngIf="c.Layout === 'Text_only'"

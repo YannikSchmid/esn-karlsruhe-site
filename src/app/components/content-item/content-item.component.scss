@@ -1,45 +1,47 @@
 .title-div {
-  @apply m-auto mb-8 relative;
+    @apply m-auto sm:mb-8 mb-4 relative;
 }
 
 .title-p {
-  @extend .title;
-  @apply font-heading text-esn-dark-blue font-medium text-4xl antialiased;
+    @extend .title;
+    @apply font-heading text-esn-dark-blue font-medium sm:text-4xl text-3xl antialiased;
 }
 
 .float-right-fig {
-  @apply pl-0 lg:pl-8 pb-2 pr-0 pt-0 top-0 lg:float-right w-4/5 lg:w-2/5 m-auto;
+    @apply pl-0 lg:pl-8 pb-2 pr-0 pt-0 top-0 lg:float-right w-4/5 lg:w-2/5 m-auto;
 }
 
 .float-left-fig {
-  @apply pr-0 lg:pr-8 pb-2 pl-0 pt-0 top-0 lg:float-left w-4/5 lg:w-2/5 m-auto;
+    @apply pr-0 lg:pr-8 pb-2 pl-0 pt-0 top-0 lg:float-left w-4/5 lg:w-2/5 m-auto;
 }
 
 .outer-imgbox {
-  @apply max-w-screen-xl m-auto sm:px-16;
+    @apply max-w-screen-xl m-auto sm:px-16;
 }
 
 .title::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -12px;
-  width: 73px;
-  height: 5px;
-  background: #2e3192;
-  clear: both;
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -12px;
+    width: 73px;
+    height: 5px;
+    background: #2e3192;
+    clear: both;
 }
 
 .fade-in-element {
-  animation: fade-in 0.9s ease-in-out;
+    animation: fade-in 0.9s ease-in-out;
 }
+
 @keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -1,35 +1,33 @@
 .title-div4 {
-  @apply m-auto mb-4 relative;
+    @apply m-auto mb-4 relative;
 }
 
 .title-p-welcome {
-  @apply font-heading text-esn-dark-blue font-medium text-5xl;
+    @apply font-heading text-esn-dark-blue font-medium sm:text-5xl text-4xl;
 }
 
 .outer-div-landing {
-  @apply max-w-screen-xl m-auto sm:px-16 xl:mt-6 lg:mt-6 sm:mt-6;
+    @apply max-w-screen-xl m-auto sm:px-16 xl:mt-6 lg:mt-6 sm:mt-6;
 }
 
 gallery {
-  background-color: rgba(234, 234, 234, var(--tw-bg-opacity)) !important;
+    background-color: rgba(234, 234, 234, var(--tw-bg-opacity)) !important;
 }
 
 .esn-colors {
-  // bottom: 0;
-  position: absolute;
-  width: 100%;
-  height: 10px;
-  background: linear-gradient(
-    90deg,
-    #00aef0 0 25vw,
-    #ed008c 25vw 50vw,
-    #7ac143 50vw 75vw,
-    #f57b20 75vw 100vw
-  );
+    // bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg,
+            #00aef0 0 25vw,
+            #ed008c 25vw 50vw,
+            #7ac143 50vw 75vw,
+            #f57b20 75vw 100vw);
 }
 
 @media only screen and (max-width: 820px) {
-  gallery {
-    height: 340px;
-  }
+    gallery {
+        height: 340px;
+    }
 }
