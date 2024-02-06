@@ -11,6 +11,8 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { MembersPageComponent } from './pages/members-page/members-page.component';
 import { StatutesPageComponent } from './pages/statutes-page/statutes-page.component';
 import { TeamPageComponent } from './pages/team-page/team-page.component';
+import {TermsAndConditionsPageComponent} from "./pages/terms-and-conditions-page/terms-and-conditions-page.component";
+import {WhatsappPageComponent} from "./pages/whatsapp-page/whatsapp-page.component";
 
 const routes: Routes = [
   {
@@ -54,6 +56,15 @@ const routes: Routes = [
     path: 'privacy-policy',
     component: CocPageComponent,
   },
+  {
+    path: 'terms-and-conditions',
+    component: TermsAndConditionsPageComponent,
+  },
+  {
+    path: 'whatsapp',
+    component: WhatsappPageComponent,
+  },
+
   {
     path: 'error',
     title: 'Oopsie - ESN Germany',
