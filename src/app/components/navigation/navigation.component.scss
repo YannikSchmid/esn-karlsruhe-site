@@ -34,6 +34,7 @@
     background: #fff;
 }
 
+
 .addhoverActive::before {
     position: absolute;
     content: "";
@@ -58,11 +59,14 @@
     }
 }
 
+
+
 .bubble {
     background-color: #3a3a3a;
     border-radius: 5px;
     padding: 10px 18px;
     position: relative;
+    z-index: 0;
     color: white;
     float: left;
     margin-top: 13px;

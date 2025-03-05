@@ -8,6 +8,11 @@
   transform: rotate(180deg);
 }
 
+.logo-link {
+  position: relative;
+  z-index: 100; /* Ensure the logo link is on top */
+}
+
 .divider-top svg {
   position: relative;
   display: block;
